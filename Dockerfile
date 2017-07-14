@@ -23,6 +23,7 @@ ADD     requirements.txt /requirements.txt
 ADD     imagerun.sh /imagerun.sh
 ADD     gcloud_tree.py /gcloud_tree.py
 ADD     k2dryrun.sh /k2dryrun.sh
+
         # Adding baseline alpine packages
 RUN     apk update && apk add libffi-dev openssl-dev python bash wget py-pip py-cffi py-cryptography unzip zip make git && \
     	/alpine-builds/build-docker.sh && rm -rf /alpine-builds &&  rm -rfv /var/cache/apk/*
